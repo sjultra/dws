@@ -1,16 +1,16 @@
 {
-  "name": "sjultra-dev",
+  "name": "dws",
   "version": "0.0.0",
-  "private": true,
-  "scripts": {
-    "start": "node ./bin/server"
-  },
   "dependencies": {
-    "@duosecurity/duo_web": "^1.0.4",
-    "debug": "~2.6.9",
-    "express": "~4.16.1",
+    "body-parser": "^1.19.0",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.4",
+    "duo_web": "^1.0.3",
+    "ejs-locals": "^1.0.2",
+    "express": "^4.17.1",
     "express-session": "^1.17.0",
-    "http-errors": "~1.6.3",
-    "morgan": "~1.9.1"
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "pkginfo": "^0.4.1"
   }
 }

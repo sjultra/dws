@@ -1,0 +1,13 @@
+<% layout('layout') -%>
+<% if (message) { %>
+<p><%= message %></p>
+<% } %>
+<form action="/login" method="post">
+	<div>
+		<label>Alias/Email:</label>
+		<input type="text" name="username" /><br />
+	</div>
+	<div>
+		<input type="submit" value="Submit" />
+	</div>
+</form>
