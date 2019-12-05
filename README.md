@@ -9,6 +9,7 @@ What things you need to install the software and how to install them
 - [nodejs](https://nodejs.org/en/ "nodejs") 
 - - [pm2](https://pm2.keymetrics.io/ "pm2")
 - [Duo](https://duo.com/ "Duo")
+- [Redis](https://redis.io/ "Redis")
 
 ## Deployment
 ```

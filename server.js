@@ -7,7 +7,10 @@ const express = require('express'),
   path = require('path'),
   cookieParser = require('cookie-parser'),
   bodyParser = require('body-parser'),
-  session = require('express-session')
+  session = require('express-session'),
+  RedisStore = require('connect-redis')(session),
+  redis = require('redis'),
+  redisClient = redis.createClient()
 
 passport.serializeUser(function (user, done) {
   done(null, user)
@@ -56,8 +59,17 @@ app.set('view engine', 'ejs')
 app.engine('ejs', require('ejs-locals'))
 app.use(express.static(__dirname + '/assets/'));
 app.use(cookieParser())
-app.use(bodyParser())
-app.use(session({ secret: skey }))
+app.use(bodyParser.urlencoded({
+  extended: true
+}))
+app.use(bodyParser.json())
+app.use(session({
+  store: new RedisStore({ host: 'localhost', port: 6379, client: redisClient, ttl: 260 }),
+  resave: false,
+  saveUninitialized: false,
+  secret: skey
+}))
+
 app.use(flash())
 app.use(passport.initialize())
 app.use(passport.session())
