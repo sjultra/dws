@@ -1,9 +1,3 @@
-/*
-* Copyright (c) 2015 Bashar Al-Rawi.  All rights reserved.
-* Copyrights licensed under the MIT License.
-* See the accompanying LICENSE file in README.md credits section for terms.
-*/
-
 const express = require('express'),
   flash = require('connect-flash'),
   passport = require('passport'),
