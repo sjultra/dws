@@ -1,5 +1,7 @@
 {
   "name": "dws",
+  "repository": "https://github.com/sjultra/dws",
+  "license": "MIT",
   "version": "0.0.0",
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -14,5 +16,19 @@
     "passport-local": "^1.0.0",
     "pkginfo": "^0.4.1",
     "redis": "^2.8.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.0.0",
+    "eslint-config-google": "^0.14.0",
+    "husky": "^4.2.5"
+  },
+  "scripts": {
+    "lint": "eslint *.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint",
+      "pre-push": "npm run lint"
+    }
   }
 }
