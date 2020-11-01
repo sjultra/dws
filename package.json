@@ -1,8 +1,9 @@
 {
   "name": "dws",
   "repository": "https://github.com/sjultra/dws",
-  "license": "MIT",
-  "version": "0.0.0",
+  "license": "Apache-2.0",
+  "author": "Eduard Tamsa",
+  "version": "0.0.1",
   "dependencies": {
     "body-parser": "^1.19.0",
     "connect-flash": "^0.1.1",
